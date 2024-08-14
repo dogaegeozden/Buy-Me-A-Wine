@@ -1,0 +1,63 @@
+/* Global styles
+-------------------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+body {
+    background: #6f2da8;
+}
+
+#CancelPageBox, #CancelPageContentBox {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+#CancelText {
+    text-align: center;
+}
+
+
+/* MEDIA QUERIES ***************************/
+
+/*****************************
+
+// PHONE
+
+*****************************/
+
+@media (min-width: 239px){
+    #CancelPageBox {
+        margin: 50px auto;
+    }
+}
+
+
+
+/*****************************
+
+// TABLET
+
+*****************************/
+
+@media (min-width: 767px) {
+    #CancelPageBox {
+        margin: 90px auto;
+    }
+}
+
+
+
+/*****************************
+
+// DESKTOP
+
+*****************************/
+
+@media (min-width: 767px) {
+    #CancelPageBox {
+        margin: 120px auto;
+    }
+}
+

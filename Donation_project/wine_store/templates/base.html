@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <!-- Creating a block called metaDescription -->
+        {% block metaDescription %}
+        {% endblock %}
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+        <!-- Creating a block called title -->
+        {% block title %}
+        {% endblock %}
+
+        <!-- Setting the encoding -->
+        <meta charset="utf-8">
+
+        <!-- Configuring how the page will be scaled-->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Load static tag to load static files. -->
+        {% load static %}
+
+        <!-- Reset style sheet which prevents the changes which may happen due to changes in css's itself's default values -->
+        <link rel="stylesheet" href="{% static 'css/wine_store/reset.css' %}">
+
+        <!-- Normilize style sheet to configure the default values of html elements -->
+        <link rel="stylesheet" href="{% static 'css/wine_store/normalize.css' %}">
+
+        <!-- Base html's style sheet -->
+        <link rel="stylesheet" href="{% static 'css/wine_store/base.css' %}">
+
+        <!-- Style sheet block for other html pages that will extend from this base html -->
+        {% block stylesheet %}
+        {% endblock %}
+
+        <!-- Head JS block for other html pages that will extend from this base html -->
+        {% block headjs %}
+        {% endblock %}
+
+    </head>
+
+    <body>
+
+        <!-- MAIN section of the page -->
+        <main>
+            <!-- A main block which other htmls to overwrite it -->
+            {% block mainBox %}
+            {% endblock %}
+        </main>
+
+        <!-- FOOTER of the page -->
+        <footer>
+            <p id="Copyright">Made by Doga Ege Ozden<br>Copyright © {% now "Y" %} All rights reserved.</p>
+        </footer>
+        
+        <!-- Creating a javascript block for other html pages which will extend from this html file -->
+        {% block js %}
+        {% endblock %}
+        
+    </body>
+
+</html>

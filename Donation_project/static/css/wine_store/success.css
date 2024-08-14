@@ -1,0 +1,70 @@
+/* Global styles
+-------------------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+body {
+    background: #920036;
+}
+
+#SuccessPageBox, #SuccessPageContentBox {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+
+/* MEDIA QUERIES ***************************/
+
+/*****************************
+
+// PHONE
+
+*****************************/
+
+@media (min-width: 239px){
+    #SuccessPageBox {
+        margin: 50px auto;
+    }
+
+    #ThanksImage{
+        display: block;
+        width: 90%;
+        margin: auto;
+        border-radius: 15px;
+    }
+}
+
+
+
+/*****************************
+
+// TABLET
+
+*****************************/
+
+@media (min-width: 767px) {
+    #SuccessPageBox {
+        margin: 90px auto;
+    }
+
+    #ThanksImage{
+        width: 600px;
+    }
+}
+
+
+
+/*****************************
+
+// DESKTOP
+
+*****************************/
+
+@media (min-width: 767px) {
+    #SuccessPageBox {
+        margin: 120px auto;
+    }
+}
+

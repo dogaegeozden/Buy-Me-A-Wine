@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>&#128293; Thank you</title>
+{% endblock %}
+
+{% block stylesheet %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/wine_store/success.css' %}">
+{% endblock %}
+
+{% block mainBox %}
+<div id="SuccessPageBox">
+    <div id="SuccessPageContentBox">
+        <h1 id="MainHeader">Wine Store</h1>
+        <img id="ThanksImage" src="{% static 'thanks.jpg' %}" alt="Photo by Alexander Sinn on Unsplash.">
+    </div>
+</div>
+{% endblock %}
