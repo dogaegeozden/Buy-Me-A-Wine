@@ -38,6 +38,6 @@ class HomePageHookLineAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Message', {
-            'fields': ('full_name', 'email', 'message',)
+            'fields': ('full_name', 'email', 'message', 'sending_time')
         }),
     )

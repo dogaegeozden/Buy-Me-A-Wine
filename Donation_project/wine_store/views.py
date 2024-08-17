@@ -1,9 +1,7 @@
 # LIBRARIES
 from django.shortcuts import render
-from django.conf import settings
 from django.urls import reverse
-from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
-from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse, HttpResponseRedirect
 from logging import basicConfig, DEBUG, debug, disable, CRITICAL
 from django.conf import settings
 import stripe
@@ -116,7 +114,6 @@ def cancel(request):
 
 ##############################
 
-@csrf_exempt
 def checkout(request):
     """A view function to display the checkout page."""
 
@@ -125,7 +122,7 @@ def checkout(request):
     try:
 
         # Get the amount from the request
-        amount = 0
+        amount = None
 
         # Create a Stripe checkout session
         session = stripe.checkout.Session.create(

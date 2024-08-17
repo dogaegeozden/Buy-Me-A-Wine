@@ -119,6 +119,12 @@ MEDIA_ROOT = Path(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Stripe Configuration
-STRIPE_PUBLIC_KEY = "stripe public key here"
+# Test Mode
+STRIPE_PUBLIC_KEY = "stripe plublic key here"
 STRIPE_PRIVATE_KEY = "stripe private key here"
 STRIPE_DONATION_PRODUCT_PRICE_ID = "stripe donation product price id here"
+
+# Production Mode
+# STRIPE_PUBLIC_KEY = "stripe plublic key here"
+# STRIPE_PRIVATE_KEY = "stripe private key here"
+# STRIPE_DONATION_PRODUCT_PRICE_ID = "stripe donation product price id here"
