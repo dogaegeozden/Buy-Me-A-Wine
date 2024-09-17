@@ -121,9 +121,6 @@ def checkout(request):
 
     try:
 
-        # Get the amount from the request
-        amount = None
-
         # Create a Stripe checkout session
         session = stripe.checkout.Session.create(
             payment_method_types=['card'],
